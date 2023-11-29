@@ -201,6 +201,11 @@ input {
   display: relative;
 }
 
+.description{
+  margin-top: 5%;
+  font-size: large;
+}
+
 .item-logo {
   max-width: 150px;
   height: auto; 
@@ -219,6 +224,26 @@ input {
  cursor: pointer;
 }
 
-.head{
-  margin-top: 20px;
+.cart-header{
+  text-align: center;
+  margin: 10px;
+  padding: auto;
+}
+
+.cart-header h1{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.cart-items{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.clear{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: skyblue;
+  color: whitesmoke;
+  cursor: pointer;
 }
