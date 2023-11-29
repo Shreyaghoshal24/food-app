@@ -14,7 +14,7 @@ export class About extends Component {
       <div>
         <h1>This is about us component</h1> 
 
-        <UserClass  name="Kumari Durga" location="Varanasi, UP" />
+        <UserClass  name="Shreya" location="Ranchi, Jh" />
       </div>
     )
   }

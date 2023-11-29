@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import HeaderComponent from "./components/HeaderComponent";
@@ -10,14 +10,26 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 const Grocery = lazy(() => import("./components/Grocery")); //on demand loading
+import UserContext from "./utils/UserContext.js";
 
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(async () => {
+    const data = await fetch("https://api.github.com/users/Shreyaghoshal24");
+    const json = await data.json();
+
+    setUserName(json.name);
+  }, []);
+
   return (
-    <div className="app">
-      <HeaderComponent />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedUser: userName }}>
+      <div className="app">
+        <HeaderComponent />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 

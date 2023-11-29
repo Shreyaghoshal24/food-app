@@ -1,4 +1,4 @@
-# foodish-app 🍔🍗🥗🍩🍜
+# food-app 🍔🍗🥗🍩🍜
 Food ordering app
 
 # Knowledge takeover
